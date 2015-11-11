@@ -45,9 +45,6 @@ var vital_commerce_0_2_300_schema = [ {
     "degree" : {
       "type" : "number"
     },
-    "githubAccount" : {
-      "type" : "string"
-    },
     "locked" : {
       "type" : "boolean"
     },

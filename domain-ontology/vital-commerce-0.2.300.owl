@@ -103,15 +103,6 @@
     
 
 
-    <!-- http://vital.ai/ontology/vital-commerce#hasGithubAccount -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasGithubAccount">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-commerce#hasMobilePhone -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasMobilePhone">
