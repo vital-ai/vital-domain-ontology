@@ -41,8 +41,8 @@
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasEntityType">
         <rdfs:comment xml:lang="en">this property determines the type of this normalized entity
 it should point to class URI, not a particular instance</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#NormalizedEntity"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital#Thing"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#NormalizedEntity"/>
     </owl:ObjectProperty>
     
 
@@ -59,6 +59,14 @@ it should point to class URI, not a particular instance</rdfs:comment>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#hasModelURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasModelURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#TargetNode"/>
     </owl:ObjectProperty>
     
 
@@ -384,6 +392,16 @@ or just just content
     
 
 
+    <!-- http://vital.ai/ontology/vital-nlp#hasLang -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasLang">
+        <rdfs:comment xml:lang="en">ISO 639-1 language code</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-nlp#hasLength -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasLength">
@@ -567,6 +585,23 @@ or just just content
     
 
 
+    <!-- http://vital.ai/ontology/vital-nlp#hasSentimentScore -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasSentimentScore">
+        <rdfs:comment xml:lang="en">positive values - positive, 0 - neutral, negative values - negative</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-nlp#Document"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-nlp#EntityInstance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-nlp#hasShortForm -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasShortForm">
@@ -698,6 +733,33 @@ or just just content
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#hasTargetDoubleValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasTargetDoubleValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#TargetNode"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#hasTargetScore -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasTargetScore">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#TargetNode"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#hasTargetStringValue -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasTargetStringValue">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#TargetNode"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -849,6 +911,23 @@ or just just content
     
 
 
+    <!-- http://vital.ai/ontology/vital-nlp#isSentimentMixed -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#isSentimentMixed">
+        <rdfs:comment xml:lang="en">tells that sentiment is mixed (both positive and negative)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-nlp#Document"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-nlp#EntityInstance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-nlp#isStandaloneTag -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#isStandaloneTag">
@@ -943,8 +1022,8 @@ or just just content
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-nlp#Edge_hasCategory">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
-        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
         <vital-core:hasEdgeDestDomain rdf:resource="&vital-core;VITAL_Category"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
     </owl:Class>
     
 
@@ -1150,6 +1229,16 @@ or just just content
     
 
 
+    <!-- http://vital.ai/ontology/vital-nlp#Edge_hasTargetNode -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-nlp#Edge_hasTargetNode">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="&vital-core;VITAL_Node"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-nlp#TargetNode"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-nlp#Edge_hasTextBlock -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-nlp#Edge_hasTextBlock">
@@ -1176,6 +1265,16 @@ or just just content
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-nlp#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#Edge_hasTranslation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-nlp#Edge_hasTranslation">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
     </owl:Class>
     
 
@@ -1297,6 +1396,14 @@ or just just content
     <!-- http://vital.ai/ontology/vital-nlp#TagElement -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-nlp#TagElement">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#TargetNode -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-nlp#TargetNode">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
     

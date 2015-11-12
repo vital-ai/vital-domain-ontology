@@ -277,6 +277,9 @@ var vital_nlp_0_2_300_schema = [ {
     "extractedTitle" : {
       "type" : "string"
     },
+    "lang" : {
+      "type" : "string"
+    },
     "name" : {
       "type" : "string"
     },
@@ -287,6 +290,12 @@ var vital_nlp_0_2_300_schema = [ {
       "type" : "number"
     },
     "publicationDate" : {
+      "type" : "number"
+    },
+    "sentimentMixed" : {
+      "type" : "boolean"
+    },
+    "sentimentScore" : {
       "type" : "number"
     },
     "sourceDomain" : {
@@ -1550,6 +1559,57 @@ var vital_nlp_0_2_300_schema = [ {
   "required" : [ "URI", "type" ],
   "additionalProperties" : false
 }, {
+  "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasTargetNode",
+  "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "http://vital.ai/ontology/vital-nlp#Edge_hasTargetNode",
+  "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-nlp#Edge_hasTargetNode",
+  "type" : "object",
+  "sourceDomains" : [ "http://vital.ai/ontology/vital-core#VITAL_Node" ],
+  "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#TargetNode" ],
+  "properties" : {
+    "URI" : {
+      "type" : "string"
+    },
+    "type" : {
+      "enum" : [ "http://vital.ai/ontology/vital-nlp#Edge_hasTargetNode" ]
+    },
+    "types" : {
+      "type" : "array",
+      "minItems" : 1,
+      "items" : {
+        "type" : "string"
+      },
+      "uniqueItems" : true
+    },
+    "URIProp" : {
+      "type" : "string"
+    },
+    "active" : {
+      "type" : "boolean"
+    },
+    "edgeDestination" : {
+      "type" : "string"
+    },
+    "edgeSource" : {
+      "type" : "string"
+    },
+    "listIndex" : {
+      "type" : "number"
+    },
+    "ontologyIRI" : {
+      "type" : "string"
+    },
+    "timestamp" : {
+      "type" : "number"
+    },
+    "versionIRI" : {
+      "type" : "string"
+    }
+  },
+  "required" : [ "URI", "type" ],
+  "additionalProperties" : false
+}, {
   "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasTextBlock",
   "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
   "$schema" : "http://json-schema.org/draft-04/schema#",
@@ -1666,6 +1726,57 @@ var vital_nlp_0_2_300_schema = [ {
     },
     "type" : {
       "enum" : [ "http://vital.ai/ontology/vital-nlp#Edge_hasTopic" ]
+    },
+    "types" : {
+      "type" : "array",
+      "minItems" : 1,
+      "items" : {
+        "type" : "string"
+      },
+      "uniqueItems" : true
+    },
+    "URIProp" : {
+      "type" : "string"
+    },
+    "active" : {
+      "type" : "boolean"
+    },
+    "edgeDestination" : {
+      "type" : "string"
+    },
+    "edgeSource" : {
+      "type" : "string"
+    },
+    "listIndex" : {
+      "type" : "number"
+    },
+    "ontologyIRI" : {
+      "type" : "string"
+    },
+    "timestamp" : {
+      "type" : "number"
+    },
+    "versionIRI" : {
+      "type" : "string"
+    }
+  },
+  "required" : [ "URI", "type" ],
+  "additionalProperties" : false
+}, {
+  "id" : "http://vital.ai/ontology/vital-nlp#Edge_hasTranslation",
+  "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "http://vital.ai/ontology/vital-nlp#Edge_hasTranslation",
+  "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-nlp#Edge_hasTranslation",
+  "type" : "object",
+  "sourceDomains" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
+  "destinationDomains" : [ "http://vital.ai/ontology/vital-nlp#Document" ],
+  "properties" : {
+    "URI" : {
+      "type" : "string"
+    },
+    "type" : {
+      "enum" : [ "http://vital.ai/ontology/vital-nlp#Edge_hasTranslation" ]
     },
     "types" : {
       "type" : "array",
@@ -1873,6 +1984,12 @@ var vital_nlp_0_2_300_schema = [ {
       "type" : "string"
     },
     "pageRank" : {
+      "type" : "number"
+    },
+    "sentimentMixed" : {
+      "type" : "boolean"
+    },
+    "sentimentScore" : {
       "type" : "number"
     },
     "spanType" : {
@@ -2632,6 +2749,67 @@ var vital_nlp_0_2_300_schema = [ {
       "type" : "number"
     },
     "tagValue" : {
+      "type" : "string"
+    },
+    "timestamp" : {
+      "type" : "number"
+    },
+    "versionIRI" : {
+      "type" : "string"
+    }
+  },
+  "required" : [ "URI", "type" ],
+  "additionalProperties" : false
+}, {
+  "id" : "http://vital.ai/ontology/vital-nlp#TargetNode",
+  "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "http://vital.ai/ontology/vital-nlp#TargetNode",
+  "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-nlp#TargetNode",
+  "type" : "object",
+  "properties" : {
+    "URI" : {
+      "type" : "string"
+    },
+    "type" : {
+      "enum" : [ "http://vital.ai/ontology/vital-nlp#TargetNode" ]
+    },
+    "types" : {
+      "type" : "array",
+      "minItems" : 1,
+      "items" : {
+        "type" : "string"
+      },
+      "uniqueItems" : true
+    },
+    "URIProp" : {
+      "type" : "string"
+    },
+    "active" : {
+      "type" : "boolean"
+    },
+    "degree" : {
+      "type" : "number"
+    },
+    "modelURI" : {
+      "type" : "string"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "ontologyIRI" : {
+      "type" : "string"
+    },
+    "pageRank" : {
+      "type" : "number"
+    },
+    "targetDoubleValue" : {
+      "type" : "number"
+    },
+    "targetScore" : {
+      "type" : "number"
+    },
+    "targetStringValue" : {
       "type" : "string"
     },
     "timestamp" : {
