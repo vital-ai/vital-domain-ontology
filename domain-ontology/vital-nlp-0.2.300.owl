@@ -454,6 +454,24 @@ or just just content
     
 
 
+    <!-- http://vital.ai/ontology/vital-nlp#hasModelPath -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasModelPath">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#FlowPredictModel"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#hasModelType -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasModelType">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#FlowPredictModel"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-nlp#hasNameVariants -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasNameVariants">
@@ -1317,6 +1335,15 @@ or just just content
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-nlp#EventInstance">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#FlowPredictModel -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-nlp#FlowPredictModel">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+        <rdfs:comment xml:lang="en">represets a model with all configuration properties</rdfs:comment>
     </owl:Class>
     
 

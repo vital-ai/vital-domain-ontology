@@ -2115,6 +2115,61 @@ var vital_nlp_0_2_300_schema = [ {
   "required" : [ "URI", "type" ],
   "additionalProperties" : false
 }, {
+  "id" : "http://vital.ai/ontology/vital-nlp#FlowPredictModel",
+  "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "http://vital.ai/ontology/vital-nlp#FlowPredictModel",
+  "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-nlp#FlowPredictModel",
+  "type" : "object",
+  "properties" : {
+    "URI" : {
+      "type" : "string"
+    },
+    "type" : {
+      "enum" : [ "http://vital.ai/ontology/vital-nlp#FlowPredictModel" ]
+    },
+    "types" : {
+      "type" : "array",
+      "minItems" : 1,
+      "items" : {
+        "type" : "string"
+      },
+      "uniqueItems" : true
+    },
+    "URIProp" : {
+      "type" : "string"
+    },
+    "active" : {
+      "type" : "boolean"
+    },
+    "degree" : {
+      "type" : "number"
+    },
+    "modelPath" : {
+      "type" : "string"
+    },
+    "modelType" : {
+      "type" : "string"
+    },
+    "name" : {
+      "type" : "string"
+    },
+    "ontologyIRI" : {
+      "type" : "string"
+    },
+    "pageRank" : {
+      "type" : "number"
+    },
+    "timestamp" : {
+      "type" : "number"
+    },
+    "versionIRI" : {
+      "type" : "string"
+    }
+  },
+  "required" : [ "URI", "type" ],
+  "additionalProperties" : false
+}, {
   "id" : "http://vital.ai/ontology/vital-nlp#Image",
   "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
   "$schema" : "http://json-schema.org/draft-04/schema#",
