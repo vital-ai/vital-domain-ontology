@@ -30,6 +30,12 @@ var vital_social_0_2_300_schema = [ {
     "active" : {
       "type" : "boolean"
     },
+    "authorID" : {
+      "type" : "number"
+    },
+    "authorName" : {
+      "type" : "string"
+    },
     "body" : {
       "type" : "string"
     },
@@ -44,6 +50,9 @@ var vital_social_0_2_300_schema = [ {
     },
     "extractedTitle" : {
       "type" : "string"
+    },
+    "favoriteCount" : {
+      "type" : "number"
     },
     "lang" : {
       "type" : "string"
@@ -77,6 +86,9 @@ var vital_social_0_2_300_schema = [ {
     },
     "title" : {
       "type" : "string"
+    },
+    "tweetID" : {
+      "type" : "number"
     },
     "url" : {
       "type" : "string"
