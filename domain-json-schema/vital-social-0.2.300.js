@@ -130,7 +130,16 @@ var vital_social_0_2_300_schema = [ {
     "active" : {
       "type" : "boolean"
     },
+    "authorName" : {
+      "type" : "string"
+    },
     "body" : {
+      "type" : "string"
+    },
+    "channelID" : {
+      "type" : "string"
+    },
+    "commentID" : {
       "type" : "string"
     },
     "degree" : {
@@ -147,6 +156,9 @@ var vital_social_0_2_300_schema = [ {
     },
     "lang" : {
       "type" : "string"
+    },
+    "likeCount" : {
+      "type" : "number"
     },
     "name" : {
       "type" : "string"
@@ -185,6 +197,9 @@ var vital_social_0_2_300_schema = [ {
       "type" : "string"
     },
     "versionIRI" : {
+      "type" : "string"
+    },
+    "videoID" : {
       "type" : "string"
     }
   },

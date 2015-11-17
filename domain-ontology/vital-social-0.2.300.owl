@@ -50,7 +50,32 @@
     <!-- http://vital.ai/ontology/vital-social#hasAuthorName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasAuthorName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Tweet"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#Tweet"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#YouTubeComment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasChannelID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasChannelID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#YouTubeComment"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasCommentID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasCommentID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#YouTubeComment"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -65,11 +90,29 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasLikeCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasLikeCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#YouTubeComment"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasTweetID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasTweetID">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Tweet"/>
         <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasVideoID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasVideoID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#YouTubeComment"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
