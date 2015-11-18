@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY vital "http://vital.ai/ontology/vital#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://vital.ai/ontology/vital-commerce#"
+     xml:base="http://vital.ai/ontology/vital-commerce"
+     xmlns:vital-core="http://vital.ai/ontology/vital-core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vital="http://vital.ai/ontology/vital#">
+    <owl:Ontology rdf:about="http://vital.ai/ontology/vital-commerce">
+        <owl:versionInfo rdf:datatype="&xsd;string">0.2.301</owl:versionInfo>
+        <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">com.vitalai.domain.commerce</vital-core:hasDefaultPackage>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasLoginURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasLoginURI">
+        <rdfs:range rdf:resource="&vital;UserLogin"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ResetPasswordRequest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasBusinessCategory -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBusinessCategory">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasBusinessName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBusinessName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasBusinessURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBusinessURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasCustomerID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasCustomerID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasDate">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ResetPasswordRequest"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasMobilePhone -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasMobilePhone">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasRandomCode -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasRandomCode">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ResetPasswordRequest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasTelephone -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasTelephone">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasUsername -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasUsername">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ResetPasswordRequest"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#isLocked -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isLocked">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#isRetired -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isRetired">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#Customer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Customer">
+        <rdfs:subClassOf rdf:resource="&vital;Account"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#ResetPasswordRequest -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#ResetPasswordRequest">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
