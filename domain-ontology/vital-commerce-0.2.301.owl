@@ -85,6 +85,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-commerce#hasCity -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasCity">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ShippingInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-commerce#hasCustomerID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasCustomerID">
@@ -103,11 +112,100 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-commerce#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasDescription">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Product"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasDiscount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasDiscount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Invoice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasFullName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasFullName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ShippingInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasGrandTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasGrandTotal">
+        <rdfs:comment xml:lang="en">subtotal - discount + tax</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Invoice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasImageURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasImageURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Product"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-commerce#hasMobilePhone -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasMobilePhone">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasPaymentMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasPaymentMethod">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasPrice">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#InvoiceItem"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasProductID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasProductID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Product"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasQuantity">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#InvoiceItem"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
 
@@ -121,11 +219,75 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-commerce#hasShortDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasShortDescription">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Product"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasState -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasState">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ShippingInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasStreetAddress1 -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasStreetAddress1">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ShippingInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasStreetAddress2 -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasStreetAddress2">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ShippingInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasSubTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasSubTotal">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Invoice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasTax -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasTax">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Invoice"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-commerce#hasTelephone -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasTelephone">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasTotalPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasTotalPrice">
+        <rdfs:comment xml:lang="en">total price for the item, price * quantity</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#InvoiceItem"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
     </owl:DatatypeProperty>
     
 
@@ -139,10 +301,28 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-commerce#hasZipCode -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasZipCode">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ShippingInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-commerce#isLocked -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isLocked">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#isProductActive -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isProductActive">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Product"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -176,9 +356,127 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-commerce#Edge_hasInvoice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Edge_hasInvoice">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="&vital;Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-commerce#Invoice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#Edge_hasItem -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Edge_hasItem">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-commerce#Invoice"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-commerce#InvoiceItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#Edge_hasPaymentInfo -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Edge_hasPaymentInfo">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-commerce#Invoice"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#Edge_hasProduct -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Edge_hasProduct">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-commerce#InvoiceItem"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-commerce#Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#Edge_hasServiceContract -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Edge_hasServiceContract">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-commerce#InvoiceItem"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#Edge_hasShippingInfo -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Edge_hasShippingInfo">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-commerce#Invoice"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-commerce#ShippingInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#Edge_hasSubscription -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Edge_hasSubscription">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="&vital;Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#Invoice -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Invoice">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#InvoiceItem -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#InvoiceItem">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#PaymentInfo -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#PaymentInfo">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#Product -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#Product">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-commerce#ResetPasswordRequest -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#ResetPasswordRequest">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#ServiceContract -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#ServiceContract">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#ShippingInfo -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#ShippingInfo">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
 </rdf:RDF>
