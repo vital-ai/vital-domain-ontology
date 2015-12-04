@@ -40,6 +40,12 @@ var vital_commerce_0_2_301_schema = {
       "http://vital.ai/ontology/vital#hasProvenance" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-commerce#hasAccountStatus" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-commerce#hasBraintreeCustomerID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-commerce#hasBusinessCategory" : {
         "type" : "string"
       },
@@ -619,7 +625,13 @@ var vital_commerce_0_2_301_schema = {
       "http://vital.ai/ontology/vital#hasProvenance" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-commerce#hasBraintreeTransactionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-commerce#hasPaymentMethod" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-commerce#hasPaymentStatus" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-core#hasName" : {
@@ -898,6 +910,24 @@ var vital_commerce_0_2_301_schema = {
     "additionalProperties" : false
   } ],
   "properties" : [ {
+    "URI" : "http://vital.ai/ontology/vital-commerce#hasAccountStatus",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
+    "shortName" : "accountStatus",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-commerce#hasBraintreeCustomerID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
+    "shortName" : "braintreeCustomerID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-commerce#hasBraintreeTransactionID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#PaymentInfo" ],
+    "shortName" : "braintreeTransactionID",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasBusinessCategory",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
     "shortName" : "businessCategory",
@@ -979,6 +1009,12 @@ var vital_commerce_0_2_301_schema = {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasPaymentMethod",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#PaymentInfo" ],
     "shortName" : "paymentMethod",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-commerce#hasPaymentStatus",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#PaymentInfo" ],
+    "shortName" : "paymentStatus",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {

@@ -58,6 +58,34 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-commerce#hasAccountStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasAccountStatus">
+        <rdfs:comment xml:lang="en">&apos;pending&apos;, &apos;complete&apos;</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasBraintreeCustomerID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBraintreeCustomerID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasBraintreeTransactionID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBraintreeTransactionID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-commerce#hasBusinessCategory -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBusinessCategory">
@@ -170,6 +198,16 @@
     <!-- http://vital.ai/ontology/vital-commerce#hasPaymentMethod -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasPaymentMethod">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#hasPaymentStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasPaymentStatus">
+        <rdfs:comment xml:lang="en">&apos;pending&apos;, &apos;done&apos;</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
