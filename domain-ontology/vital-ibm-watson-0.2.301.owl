@@ -66,7 +66,7 @@
     <!-- http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Agreeableness"/>
         <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
@@ -156,7 +156,7 @@
     <!-- http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Conscientiousness"/>
         <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
@@ -201,7 +201,7 @@
     <!-- http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#EmotionalRange"/>
         <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
@@ -237,7 +237,7 @@
     <!-- http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Extraversion"/>
         <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
@@ -363,7 +363,7 @@
     <!-- http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Big5"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Openness"/>
         <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
@@ -508,16 +508,6 @@
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasUncompromisingValue">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#Agreeableness"/>
-        <rdfs:range rdf:resource="&xsd;double"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-ibm-watson#hasValue -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasValue">
-        <rdfs:comment xml:lang="en">this nodes percentage value</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#PersonalityInsight"/>
         <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     

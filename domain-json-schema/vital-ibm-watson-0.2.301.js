@@ -64,22 +64,10 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-ibm-watson#hasCategory" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasCooperationValue" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasModestyValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasSympathyValue" : {
@@ -89,9 +77,6 @@ var vital_ibm_watson_0_2_301_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasUncompromisingValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasValue" : {
         "type" : "number"
       }
     },
@@ -146,26 +131,8 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-core#isActive" : {
         "type" : "boolean"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasCategory" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasValue" : {
-        "type" : "number"
       }
     },
     "required" : [ "URI", "type" ],
@@ -222,9 +189,6 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-ibm-watson#hasAchievementStrivingValue" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasCategory" : {
         "type" : "string"
       },
@@ -237,15 +201,6 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-ibm-watson#hasDutifulnessValue" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasOrderlinessValue" : {
         "type" : "number"
       },
@@ -253,9 +208,6 @@ var vital_ibm_watson_0_2_301_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasSelfEfficacyValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasValue" : {
         "type" : "number"
       }
     },
@@ -364,19 +316,10 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-core#isActive" : {
         "type" : "boolean"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasCategory" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasFieryValue" : {
@@ -388,9 +331,6 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-ibm-watson#hasMelancholyValue" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasProneToWorryValue" : {
         "type" : "number"
       },
@@ -398,9 +338,6 @@ var vital_ibm_watson_0_2_301_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasSusceptibleToStressValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasValue" : {
         "type" : "number"
       }
     },
@@ -458,9 +395,6 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-ibm-watson#hasActivityLevelValue" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasAssertivenessValue" : {
         "type" : "number"
       },
@@ -468,12 +402,6 @@ var vital_ibm_watson_0_2_301_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasCheerfulnessValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasExcitementSeekingValue" : {
@@ -485,13 +413,7 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-ibm-watson#hasGregariousnessValue" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasOutgoingValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasValue" : {
         "type" : "number"
       }
     },
@@ -584,9 +506,6 @@ var vital_ibm_watson_0_2_301_schema = {
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasStructureValue" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasValue" : {
-        "type" : "number"
       }
     },
     "required" : [ "URI", "type" ],
@@ -643,9 +562,6 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-ibm-watson#hasAdventurousnessValue" : {
         "type" : "number"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasArtisticInterestsValue" : {
         "type" : "number"
       },
@@ -655,16 +571,7 @@ var vital_ibm_watson_0_2_301_schema = {
       "http://vital.ai/ontology/vital-ibm-watson#hasCategory" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-ibm-watson#hasEmotionalityValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue" : {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasImaginationValue" : {
@@ -674,9 +581,6 @@ var vital_ibm_watson_0_2_301_schema = {
         "type" : "number"
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasValue" : {
         "type" : "number"
       }
     },
@@ -733,9 +637,6 @@ var vital_ibm_watson_0_2_301_schema = {
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasCategory" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasValue" : {
-        "type" : "number"
       }
     },
     "required" : [ "URI", "type" ],
@@ -806,9 +707,6 @@ var vital_ibm_watson_0_2_301_schema = {
       },
       "http://vital.ai/ontology/vital-ibm-watson#hasSelfTranscendenceValue" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-ibm-watson#hasValue" : {
-        "type" : "number"
       }
     },
     "required" : [ "URI", "type" ],
@@ -834,7 +732,7 @@ var vital_ibm_watson_0_2_301_schema = {
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-ibm-watson#hasAgreeablenessValue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Big5" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Agreeableness" ],
     "shortName" : "agreeablenessValue",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -894,7 +792,7 @@ var vital_ibm_watson_0_2_301_schema = {
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-ibm-watson#hasConscientiousnessValue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Big5" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Conscientiousness" ],
     "shortName" : "conscientiousnessValue",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -924,7 +822,7 @@ var vital_ibm_watson_0_2_301_schema = {
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-ibm-watson#hasEmotionalRangeValue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Big5" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#EmotionalRange" ],
     "shortName" : "emotionalRangeValue",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -948,7 +846,7 @@ var vital_ibm_watson_0_2_301_schema = {
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-ibm-watson#hasExtraversionValue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Big5" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Extraversion" ],
     "shortName" : "extraversionValue",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -1032,7 +930,7 @@ var vital_ibm_watson_0_2_301_schema = {
     "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-ibm-watson#hasOpennessValue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Big5" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Openness" ],
     "shortName" : "opennessValue",
     "multipleValues" : false,
     "type" : "DoubleProperty"
@@ -1130,12 +1028,6 @@ var vital_ibm_watson_0_2_301_schema = {
     "URI" : "http://vital.ai/ontology/vital-ibm-watson#hasUncompromisingValue",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#Agreeableness" ],
     "shortName" : "uncompromisingValue",
-    "multipleValues" : false,
-    "type" : "DoubleProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-ibm-watson#hasValue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-ibm-watson#PersonalityInsight" ],
-    "shortName" : "value",
     "multipleValues" : false,
     "type" : "DoubleProperty"
   } ]
