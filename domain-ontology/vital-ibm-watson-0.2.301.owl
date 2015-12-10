@@ -108,15 +108,6 @@
     
 
 
-    <!-- http://vital.ai/ontology/vital-ibm-watson#hasCategory -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasCategory">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-ibm-watson#PersonalityInsight"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-ibm-watson#hasCautiousnessValue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-ibm-watson#hasCautiousnessValue">
