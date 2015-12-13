@@ -46,6 +46,9 @@ var vital_commerce_0_2_301_schema = {
       "http://vital.ai/ontology/vital-commerce#hasExpirationDate" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-commerce#hasImageURL" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-commerce#hasMaskedNumber" : {
         "type" : "string"
       },
@@ -921,6 +924,9 @@ var vital_commerce_0_2_301_schema = {
       "http://vital.ai/ontology/vital#hasProvenance" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-commerce#hasImageURL" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-commerce#hasToken" : {
         "type" : "string"
       },
@@ -995,6 +1001,9 @@ var vital_commerce_0_2_301_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-commerce#hasDescription" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-commerce#hasImageURL" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-commerce#hasNumberOfBillingCycles" : {
@@ -1535,7 +1544,7 @@ var vital_commerce_0_2_301_schema = {
     "type" : "FloatProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasImageURL",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Product" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#PaymentMethod", "http://vital.ai/ontology/vital-commerce#Plan", "http://vital.ai/ontology/vital-commerce#Product" ],
     "shortName" : "imageURL",
     "multipleValues" : false,
     "type" : "StringProperty"

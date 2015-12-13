@@ -360,8 +360,16 @@ Unknown</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-commerce#hasImageURL -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasImageURL">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Product"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#PaymentMethod"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#Plan"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#Product"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
