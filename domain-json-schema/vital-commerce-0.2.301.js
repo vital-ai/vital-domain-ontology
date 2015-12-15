@@ -796,6 +796,15 @@ var vital_commerce_0_2_301_schema = {
       "http://vital.ai/ontology/vital#hasProvenance" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-commerce#hasBillingPeriodEndDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-commerce#hasBillingPeriodStartDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-commerce#hasCurrentBillingCycle" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-commerce#hasPrice" : {
         "type" : "number"
       },
@@ -857,11 +866,26 @@ var vital_commerce_0_2_301_schema = {
       "http://vital.ai/ontology/vital#hasProvenance" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-commerce#hasAmount" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-commerce#hasBillingPeriodEndDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-commerce#hasBillingPeriodStartDate" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-commerce#hasBraintreeSubscriptionID" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-commerce#hasBraintreeTransactionID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-commerce#hasCreatedAt" : {
         "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-commerce#hasCurrencyIsoCode" : {
+        "type" : "string"
       },
       "http://vital.ai/ontology/vital-commerce#hasPaymentMethod" : {
         "type" : "string"
@@ -1381,6 +1405,12 @@ var vital_commerce_0_2_301_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-commerce#hasAmount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#PaymentInfo" ],
+    "shortName" : "amount",
+    "multipleValues" : false,
+    "type" : "FloatProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasBalance",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "shortName" : "balance",
@@ -1400,13 +1430,13 @@ var vital_commerce_0_2_301_schema = {
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasBillingPeriodEndDate",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#InvoiceItem", "http://vital.ai/ontology/vital-commerce#PaymentInfo", "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "shortName" : "billingPeriodEndDate",
     "multipleValues" : false,
     "type" : "DateProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasBillingPeriodStartDate",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#InvoiceItem", "http://vital.ai/ontology/vital-commerce#PaymentInfo", "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "shortName" : "billingPeriodStartDate",
     "multipleValues" : false,
     "type" : "DateProperty"
@@ -1424,7 +1454,7 @@ var vital_commerce_0_2_301_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasBraintreeSubscriptionID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#PaymentInfo", "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "shortName" : "braintreeSubscriptionID",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -1472,13 +1502,13 @@ var vital_commerce_0_2_301_schema = {
     "type" : "DateProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasCurrencyIsoCode",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Plan" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#PaymentInfo", "http://vital.ai/ontology/vital-commerce#Plan" ],
     "shortName" : "currencyIsoCode",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasCurrentBillingCycle",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#InvoiceItem", "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "shortName" : "currentBillingCycle",
     "multipleValues" : false,
     "type" : "IntegerProperty"

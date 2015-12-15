@@ -68,6 +68,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-commerce#hasAmount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasAmount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-commerce#hasBalance -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBalance">
@@ -106,8 +115,16 @@
     <!-- http://vital.ai/ontology/vital-commerce#hasBillingPeriodEndDate -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBillingPeriodEndDate">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#InvoiceItem"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -115,8 +132,16 @@
     <!-- http://vital.ai/ontology/vital-commerce#hasBillingPeriodStartDate -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBillingPeriodStartDate">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#InvoiceItem"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -149,8 +174,15 @@
     <!-- http://vital.ai/ontology/vital-commerce#hasBraintreeSubscriptionID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasBraintreeSubscriptionID">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -243,8 +275,15 @@ Unknown</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasCurrencyIsoCode">
         <rdfs:comment xml:lang="en">ISO 4217 code</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Plan"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#PaymentInfo"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#Plan"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -252,8 +291,15 @@ Unknown</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-commerce#hasCurrentBillingCycle -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasCurrentBillingCycle">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
         <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#InvoiceItem"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
