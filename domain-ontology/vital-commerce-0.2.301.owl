@@ -58,6 +58,16 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-commerce#hasAccountPlanStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasAccountPlanStatus">
+        <rdfs:comment xml:lang="en">valid, grace-period, invalid</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-commerce#hasAccountStatus -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasAccountStatus">
@@ -325,8 +335,15 @@ Unknown</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-commerce#hasDaysPastDue -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#hasDaysPastDue">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
         <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#Customer"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-commerce#ServiceContract"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -784,6 +801,16 @@ PENDING</rdfs:comment>
     <!-- http://vital.ai/ontology/vital-commerce#isRetired -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isRetired">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-commerce#isTestAccount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isTestAccount">
+        <rdfs:comment xml:lang="en">a test account can be deleted even if it has invoices etc</rdfs:comment>
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>

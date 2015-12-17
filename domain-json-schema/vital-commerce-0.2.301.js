@@ -110,6 +110,9 @@ var vital_commerce_0_2_301_schema = {
       "http://vital.ai/ontology/vital#hasProvenance" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-commerce#hasAccountPlanStatus" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-commerce#hasAccountStatus" : {
         "type" : "string"
       },
@@ -128,6 +131,9 @@ var vital_commerce_0_2_301_schema = {
       "http://vital.ai/ontology/vital-commerce#hasCustomerID" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-commerce#hasDaysPastDue" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-commerce#hasMobilePhone" : {
         "type" : "string"
       },
@@ -138,6 +144,9 @@ var vital_commerce_0_2_301_schema = {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-commerce#isRetired" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-commerce#isTestAccount" : {
         "type" : "boolean"
       },
       "http://vital.ai/ontology/vital-core#hasName" : {
@@ -1399,6 +1408,12 @@ var vital_commerce_0_2_301_schema = {
     "additionalProperties" : false
   } ],
   "properties" : [ {
+    "URI" : "http://vital.ai/ontology/vital-commerce#hasAccountPlanStatus",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
+    "shortName" : "accountPlanStatus",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasAccountStatus",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
     "shortName" : "accountStatus",
@@ -1526,7 +1541,7 @@ var vital_commerce_0_2_301_schema = {
     "type" : "DateProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasDaysPastDue",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer", "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "shortName" : "daysPastDue",
     "multipleValues" : false,
     "type" : "IntegerProperty"
@@ -1792,6 +1807,12 @@ var vital_commerce_0_2_301_schema = {
     "URI" : "http://vital.ai/ontology/vital-commerce#isRetired",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
     "shortName" : "retired",
+    "multipleValues" : false,
+    "type" : "BooleanProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-commerce#isTestAccount",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
+    "shortName" : "testAccount",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   } ]
