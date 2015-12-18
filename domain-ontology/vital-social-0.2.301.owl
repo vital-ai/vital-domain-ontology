@@ -81,11 +81,29 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasFacebookID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasFacebookID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#FacebookAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasFavoriteCount -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasFavoriteCount">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Tweet"/>
         <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasInstagramID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasInstagramID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#InstagramAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -99,6 +117,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasPictureURL -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasPictureURL">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasTweetID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasTweetID">
@@ -108,10 +135,20 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasTwitterID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasTwitterID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#TwitterAccount"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasVideoID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasVideoID">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#YouTubeComment"/>
+        <rdfs:subPropertyOf rdf:resource="http://vital.ai/ontology/vital-social#hasTweetID"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -128,10 +165,52 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasSocialMediaAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasSocialMediaAccount">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#FacebookAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#FacebookAccount">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#InstagramAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#InstagramAccount">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#SocialMediaAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#SocialMediaAccount">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#Tweet -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Tweet">
         <rdfs:subClassOf rdf:resource="&vital-nlp;Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#TwitterAccount -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#TwitterAccount">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
     </owl:Class>
     
 
