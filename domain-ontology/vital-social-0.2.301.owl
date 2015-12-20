@@ -38,6 +38,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasAccessToken -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasAccessToken">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasAuthorID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasAuthorID">
@@ -59,6 +68,15 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasCategory -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasCategory">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#FacebookAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
