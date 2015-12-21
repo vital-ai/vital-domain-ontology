@@ -99,6 +99,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasDescription">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#TwitterAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasFacebookID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasFacebookID">
@@ -135,10 +144,37 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasOAuthToken -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasOAuthToken">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#TwitterAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasOAuthTokenSecret -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasOAuthTokenSecret">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#TwitterAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasPictureURL -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasPictureURL">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasScreenName -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasScreenName">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#TwitterAccount"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     

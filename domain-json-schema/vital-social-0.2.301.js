@@ -398,7 +398,19 @@ var vital_social_0_2_301_schema = {
       "http://vital.ai/ontology/vital-social#hasAccessToken" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-social#hasDescription" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasOAuthToken" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasOAuthTokenSecret" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-social#hasPictureURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasScreenName" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#hasTwitterID" : {
@@ -551,6 +563,12 @@ var vital_social_0_2_301_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasDescription",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#TwitterAccount" ],
+    "shortName" : "description",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasFacebookID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FacebookAccount" ],
     "shortName" : "facebookID",
@@ -575,9 +593,27 @@ var vital_social_0_2_301_schema = {
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasOAuthToken",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#TwitterAccount" ],
+    "shortName" : "oAuthToken",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasOAuthTokenSecret",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#TwitterAccount" ],
+    "shortName" : "oAuthTokenSecret",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasPictureURL",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#SocialMediaAccount" ],
     "shortName" : "pictureURL",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasScreenName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#TwitterAccount" ],
+    "shortName" : "screenName",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
