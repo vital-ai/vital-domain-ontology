@@ -176,10 +176,19 @@ var vital_social_0_2_301_schema = {
       "http://vital.ai/ontology/vital-social#hasAccessToken" : {
         "type" : "string"
       },
+      "http://vital.ai/ontology/vital-social#hasBio" : {
+        "type" : "string"
+      },
       "http://vital.ai/ontology/vital-social#hasInstagramID" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-social#hasPictureURL" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasUsername" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasWebsite" : {
         "type" : "string"
       }
     },
@@ -545,6 +554,12 @@ var vital_social_0_2_301_schema = {
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasBio",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#InstagramAccount" ],
+    "shortName" : "bio",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasCategory",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FacebookAccount" ],
     "shortName" : "category",
@@ -629,12 +644,24 @@ var vital_social_0_2_301_schema = {
     "multipleValues" : false,
     "type" : "LongProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasUsername",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#InstagramAccount" ],
+    "shortName" : "username",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasVideoID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#YouTubeComment" ],
     "shortName" : "videoID",
     "multipleValues" : false,
     "type" : "StringProperty",
     "parent" : "http://vital.ai/ontology/vital-social#hasTweetID"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasWebsite",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#InstagramAccount" ],
+    "shortName" : "website",
+    "multipleValues" : false,
+    "type" : "StringProperty"
   } ]
 };
 
