@@ -7,6 +7,60 @@ var vital_social_0_2_301_schema = {
   "name" : "vital-social-0.2.301",
   "parents" : [ "http://vital.ai/ontology/vital-nlp" ],
   "schemas" : [ {
+    "id" : "http://vital.ai/ontology/vital-social#Edge_hasFanCountry",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title" : "http://vital.ai/ontology/vital-social#Edge_hasFanCountry",
+    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-social#Edge_hasFanCountry",
+    "type" : "object",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-social#SocialMediaAccount" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-social#FanCountry" ],
+    "properties" : {
+      "URI" : {
+        "type" : "string"
+      },
+      "type" : {
+        "enum" : [ "http://vital.ai/ontology/vital-social#Edge_hasFanCountry" ]
+      },
+      "types" : {
+        "type" : "array",
+        "minItems" : 1,
+        "items" : {
+          "type" : "string"
+        },
+        "uniqueItems" : true
+      },
+      "http://vital.ai/ontology/vital#hasCertainty" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasProvenance" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasListIndex" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#isActive" : {
+        "type" : "boolean"
+      }
+    },
+    "required" : [ "URI", "type" ],
+    "additionalProperties" : false
+  }, {
     "id" : "http://vital.ai/ontology/vital-social#Edge_hasSocialMediaAccount",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
     "$schema" : "http://json-schema.org/draft-04/schema#",
@@ -132,6 +186,61 @@ var vital_social_0_2_301_schema = {
       },
       "http://vital.ai/ontology/vital-social#isTokenValid" : {
         "type" : "boolean"
+      }
+    },
+    "required" : [ "URI", "type" ],
+    "additionalProperties" : false
+  }, {
+    "id" : "http://vital.ai/ontology/vital-social#FanCountry",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title" : "http://vital.ai/ontology/vital-social#FanCountry",
+    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-social#FanCountry",
+    "type" : "object",
+    "properties" : {
+      "URI" : {
+        "type" : "string"
+      },
+      "type" : {
+        "enum" : [ "http://vital.ai/ontology/vital-social#FanCountry" ]
+      },
+      "types" : {
+        "type" : "array",
+        "minItems" : 1,
+        "items" : {
+          "type" : "string"
+        },
+        "uniqueItems" : true
+      },
+      "http://vital.ai/ontology/vital#hasCertainty" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasDegree" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasPageRank" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasProvenance" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#isActive" : {
+        "type" : "boolean"
+      },
+      "http://vital.ai/ontology/vital-social#hasLikesCount" : {
+        "type" : "number"
       }
     },
     "required" : [ "URI", "type" ],
@@ -669,7 +778,7 @@ var vital_social_0_2_301_schema = {
     "type" : "IntegerProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasLikesCount",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#SocialMediaAccount" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#FanCountry", "http://vital.ai/ontology/vital-social#SocialMediaAccount" ],
     "shortName" : "likesCount",
     "multipleValues" : false,
     "type" : "IntegerProperty"

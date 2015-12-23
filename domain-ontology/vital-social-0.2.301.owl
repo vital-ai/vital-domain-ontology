@@ -190,8 +190,15 @@
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasLikesCount">
         <rdfs:comment xml:lang="en">likes, favourites etc</rdfs:comment>
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
         <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#FanCountry"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -332,6 +339,16 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasFanCountry -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasFanCountry">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#FanCountry"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#Edge_hasSocialMediaAccount -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasSocialMediaAccount">
@@ -346,6 +363,15 @@
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-social#FacebookAccount">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#FanCountry -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#FanCountry">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+        <rdfs:comment xml:lang="en">keeps the country -&gt; likes count association</rdfs:comment>
     </owl:Class>
     
 
