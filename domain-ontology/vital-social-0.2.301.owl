@@ -135,6 +135,39 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasFollowersCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasFollowersCount">
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#InstagramAccount"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#TwitterAccount"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasFollowingCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasFollowingCount">
+        <rdfs:comment xml:lang="en">(twitter friends)</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#InstagramAccount"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#TwitterAccount"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasInstagramID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasInstagramID">
@@ -153,6 +186,25 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasLikesCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasLikesCount">
+        <rdfs:comment xml:lang="en">likes, favourites etc</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasMediaCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasMediaCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#InstagramAccount"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasOAuthToken -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasOAuthToken">
@@ -166,6 +218,16 @@
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasOAuthTokenSecret">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#TwitterAccount"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasPageFansCountry -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasPageFansCountry">
+        <rdfs:comment xml:lang="en">json data from page insights graph api</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#FacebookAccount"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -198,6 +260,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasTweetsCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasTweetsCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#TwitterAccount"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasTwitterID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasTwitterID">
@@ -210,8 +281,15 @@
     <!-- http://vital.ai/ontology/vital-social#hasUsername -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasUsername">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#InstagramAccount"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#FacebookAccount"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#InstagramAccount"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -220,7 +298,6 @@
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasVideoID">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#YouTubeComment"/>
-        <rdfs:subPropertyOf rdf:resource="http://vital.ai/ontology/vital-social#hasTweetID"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -231,6 +308,15 @@
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasWebsite">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#InstagramAccount"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#isTokenValid -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#isTokenValid">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
 
