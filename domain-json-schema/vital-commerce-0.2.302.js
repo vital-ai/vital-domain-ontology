@@ -6,7 +6,7 @@ var vital_commerce_0_2_302_schema = {
   "domainURI" : "http://vital.ai/ontology/vital-commerce",
   "name" : "vital-commerce-0.2.302",
   "vitalsignsVersion" : "0.2.302",
-  "parents" : [ "http://vital.ai/ontology/vital" ],
+  "parents" : [ "http://vital.ai/ontology/vital-generic-app" ],
   "schemas" : [ {
     "id" : "http://vital.ai/ontology/vital-commerce#CreditCard",
     "parent" : "http://vital.ai/ontology/vital-commerce#PaymentMethod",

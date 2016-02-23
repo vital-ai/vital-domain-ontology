@@ -8,11 +8,13 @@
     <!ENTITY vital-core "http://vital.ai/ontology/vital-core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vital-generic-app "http://vital.ai/ontology/vital-generic-app#" >
 ]>
 
 
 <rdf:RDF xmlns="http://vital.ai/ontology/vital-commerce#"
      xml:base="http://vital.ai/ontology/vital-commerce"
+     xmlns:vital-generic-app="http://vital.ai/ontology/vital-generic-app#"
      xmlns:vital-core="http://vital.ai/ontology/vital-core#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -22,7 +24,7 @@
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-commerce">
         <owl:versionInfo rdf:datatype="&xsd;string">0.2.302</owl:versionInfo>
         <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">com.vitalai.domain.commerce</vital-core:hasDefaultPackage>
-        <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
+        <owl:imports rdf:resource="http://vital.ai/ontology/vital-generic-app"/>
     </owl:Ontology>
     
 
@@ -1014,6 +1016,7 @@ PENDING</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#ShippingInfo">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
+
 </rdf:RDF>
 
 
