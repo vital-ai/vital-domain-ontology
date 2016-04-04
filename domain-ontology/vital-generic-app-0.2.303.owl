@@ -54,6 +54,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-generic-app#hasMailingListURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/vital-generic-app#hasMailingListURI">
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-generic-app#MailingList"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-generic-app#MailingListMember"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -65,11 +74,52 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-generic-app#hasDateSubscribed -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-generic-app#hasDateSubscribed">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-generic-app#MailingListMember"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-generic-app#hasEmail -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-generic-app#hasEmail">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-generic-app#MailingList"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-generic-app#MailingListMember"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-generic-app#hasOrganization -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-generic-app#hasOrganization">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-generic-app#MailingListMember"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-generic-app#hasRandomCode -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-generic-app#hasRandomCode">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-generic-app#InvitationCodeRequest"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-generic-app#InvitationCodeRequest"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-generic-app#MailingListMember"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -93,10 +143,29 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-generic-app#isEmailActive -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-generic-app#isEmailActive">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-generic-app#MailingListMember"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-generic-app#isInvitationCodeRequestsEnabled -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-generic-app#isInvitationCodeRequestsEnabled">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-generic-app#AppConfiguration"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-generic-app#isMailgun -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-generic-app#isMailgun">
+        <rdfs:comment xml:lang="en">a flag that indicates if mailing list is managed by mailgun api</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-generic-app#MailingList"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -124,6 +193,22 @@
     <!-- http://vital.ai/ontology/vital-generic-app#InvitationCodeRequest -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-generic-app#InvitationCodeRequest">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-generic-app#MailingList -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-generic-app#MailingList">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-generic-app#MailingListMember -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-generic-app#MailingListMember">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
 </rdf:RDF>
