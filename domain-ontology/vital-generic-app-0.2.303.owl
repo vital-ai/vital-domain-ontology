@@ -190,6 +190,26 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-generic-app#Edge_hasUserRight -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-generic-app#Edge_hasUserRight">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-generic-app#UserRight"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-generic-app#UserRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-generic-app#Edge_hasUserRole -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-generic-app#Edge_hasUserRole">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_PeerEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#UserLogin"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-generic-app#UserRole"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-generic-app#InvitationCodeRequest -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-generic-app#InvitationCodeRequest">
@@ -209,6 +229,22 @@
     <!-- http://vital.ai/ontology/vital-generic-app#MailingListMember -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-generic-app#MailingListMember">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-generic-app#UserRight -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-generic-app#UserRight">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-generic-app#UserRole -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-generic-app#UserRole">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
 </rdf:RDF>
