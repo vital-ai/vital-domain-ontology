@@ -66,6 +66,120 @@ var vital_generic_app_0_2_303_schema = {
     "required" : [ "URI", "type" ],
     "additionalProperties" : false
   }, {
+    "id" : "http://vital.ai/ontology/vital-generic-app#Edge_hasUserRight",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title" : "http://vital.ai/ontology/vital-generic-app#Edge_hasUserRight",
+    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-generic-app#Edge_hasUserRight",
+    "type" : "object",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital-generic-app#UserRole" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-generic-app#UserRight" ],
+    "properties" : {
+      "URI" : {
+        "type" : "string"
+      },
+      "type" : {
+        "enum" : [ "http://vital.ai/ontology/vital-generic-app#Edge_hasUserRight" ]
+      },
+      "types" : {
+        "type" : "array",
+        "minItems" : 1,
+        "items" : {
+          "type" : "string"
+        },
+        "uniqueItems" : true
+      },
+      "http://vital.ai/ontology/vital#hasCertainty" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasListIndex" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasProvenance" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#isActive" : {
+        "type" : "boolean"
+      }
+    },
+    "required" : [ "URI", "type" ],
+    "additionalProperties" : false
+  }, {
+    "id" : "http://vital.ai/ontology/vital-generic-app#Edge_hasUserRole",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_PeerEdge",
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title" : "http://vital.ai/ontology/vital-generic-app#Edge_hasUserRole",
+    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-generic-app#Edge_hasUserRole",
+    "type" : "object",
+    "sourceDomains" : [ "http://vital.ai/ontology/vital#UserLogin" ],
+    "destinationDomains" : [ "http://vital.ai/ontology/vital-generic-app#UserRole" ],
+    "properties" : {
+      "URI" : {
+        "type" : "string"
+      },
+      "type" : {
+        "enum" : [ "http://vital.ai/ontology/vital-generic-app#Edge_hasUserRole" ]
+      },
+      "types" : {
+        "type" : "array",
+        "minItems" : 1,
+        "items" : {
+          "type" : "string"
+        },
+        "uniqueItems" : true
+      },
+      "http://vital.ai/ontology/vital#hasCertainty" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasListIndex" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasProvenance" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#isActive" : {
+        "type" : "boolean"
+      }
+    },
+    "required" : [ "URI", "type" ],
+    "additionalProperties" : false
+  }, {
     "id" : "http://vital.ai/ontology/vital-generic-app#InvitationCodeRequest",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
     "$schema" : "http://json-schema.org/draft-04/schema#",
@@ -264,6 +378,116 @@ var vital_generic_app_0_2_303_schema = {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-generic-app#isEmailActive" : {
+        "type" : "boolean"
+      }
+    },
+    "required" : [ "URI", "type" ],
+    "additionalProperties" : false
+  }, {
+    "id" : "http://vital.ai/ontology/vital-generic-app#UserRight",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title" : "http://vital.ai/ontology/vital-generic-app#UserRight",
+    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-generic-app#UserRight",
+    "type" : "object",
+    "properties" : {
+      "URI" : {
+        "type" : "string"
+      },
+      "type" : {
+        "enum" : [ "http://vital.ai/ontology/vital-generic-app#UserRight" ]
+      },
+      "types" : {
+        "type" : "array",
+        "minItems" : 1,
+        "items" : {
+          "type" : "string"
+        },
+        "uniqueItems" : true
+      },
+      "http://vital.ai/ontology/vital#hasCertainty" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasDegree" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasPageRank" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasProvenance" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#isActive" : {
+        "type" : "boolean"
+      }
+    },
+    "required" : [ "URI", "type" ],
+    "additionalProperties" : false
+  }, {
+    "id" : "http://vital.ai/ontology/vital-generic-app#UserRole",
+    "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title" : "http://vital.ai/ontology/vital-generic-app#UserRole",
+    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-generic-app#UserRole",
+    "type" : "object",
+    "properties" : {
+      "URI" : {
+        "type" : "string"
+      },
+      "type" : {
+        "enum" : [ "http://vital.ai/ontology/vital-generic-app#UserRole" ]
+      },
+      "types" : {
+        "type" : "array",
+        "minItems" : 1,
+        "items" : {
+          "type" : "string"
+        },
+        "uniqueItems" : true
+      },
+      "http://vital.ai/ontology/vital#hasCertainty" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasDegree" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital#hasPageRank" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasProvenance" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-core#isActive" : {
         "type" : "boolean"
       }
     },
