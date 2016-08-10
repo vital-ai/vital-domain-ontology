@@ -743,6 +743,21 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-social#hasFavoriteCount" : {
         "type" : "number"
       },
+      "http://vital.ai/ontology/vital-social#hasInReplyToScreenName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasInReplyToTweetID" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-social#hasInReplyToUserID" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-social#hasLatitude" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-social#hasLongitude" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-social#hasOriginalAuthorID" : {
         "type" : "number"
       },
@@ -1168,11 +1183,35 @@ var vital_social_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "IntegerProperty"
   }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasInReplyToScreenName",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
+    "shortName" : "inReplyToScreenName",
+    "multipleValues" : false,
+    "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasInReplyToTweetID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
+    "shortName" : "inReplyToTweetID",
+    "multipleValues" : false,
+    "type" : "LongProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasInReplyToUserID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
+    "shortName" : "inReplyToUserID",
+    "multipleValues" : false,
+    "type" : "LongProperty"
+  }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasInstagramID",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#InstagramAccount" ],
     "shortName" : "instagramID",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasLatitude",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
+    "shortName" : "latitude",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasLikeCount",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#YouTubeComment" ],
@@ -1185,6 +1224,12 @@ var vital_social_0_2_304_schema = {
     "shortName" : "likesCount",
     "multipleValues" : false,
     "type" : "IntegerProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasLongitude",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
+    "shortName" : "longitude",
+    "multipleValues" : false,
+    "type" : "DoubleProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasMediaCount",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#InstagramAccount" ],
