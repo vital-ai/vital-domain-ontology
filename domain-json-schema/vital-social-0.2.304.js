@@ -98,6 +98,18 @@ var vital_social_0_2_304_schema = {
       "http://vital.ai/ontology/vital-nlp#isSentimentMixed" : {
         "type" : "boolean"
       },
+      "http://vital.ai/ontology/vital-social#hasAuthorID" : {
+        "type" : "number"
+      },
+      "http://vital.ai/ontology/vital-social#hasAuthorName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasAuthorScreenName" : {
+        "type" : "string"
+      },
+      "http://vital.ai/ontology/vital-social#hasDirectMessageID" : {
+        "type" : "number"
+      },
       "http://vital.ai/ontology/vital-social#hasRecipientID" : {
         "type" : "number"
       },
@@ -1082,19 +1094,19 @@ var vital_social_0_2_304_schema = {
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasAuthorID",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#DirectMessage", "http://vital.ai/ontology/vital-social#Tweet" ],
     "shortName" : "authorID",
     "multipleValues" : false,
     "type" : "LongProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasAuthorName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet", "http://vital.ai/ontology/vital-social#YouTubeComment" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#DirectMessage", "http://vital.ai/ontology/vital-social#Tweet", "http://vital.ai/ontology/vital-social#YouTubeComment" ],
     "shortName" : "authorName",
     "multipleValues" : false,
     "type" : "StringProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasAuthorScreenName",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#Tweet" ],
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#DirectMessage", "http://vital.ai/ontology/vital-social#Tweet" ],
     "shortName" : "authorScreenName",
     "multipleValues" : false,
     "type" : "StringProperty"
@@ -1146,6 +1158,12 @@ var vital_social_0_2_304_schema = {
     "shortName" : "description",
     "multipleValues" : false,
     "type" : "StringProperty"
+  }, {
+    "URI" : "http://vital.ai/ontology/vital-social#hasDirectMessageID",
+    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#DirectMessage" ],
+    "shortName" : "directMessageID",
+    "multipleValues" : false,
+    "type" : "LongProperty"
   }, {
     "URI" : "http://vital.ai/ontology/vital-social#hasDiscogsName",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-social#SoundCloudAccount" ],

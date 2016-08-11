@@ -71,8 +71,15 @@
     <!-- http://vital.ai/ontology/vital-social#hasAuthorID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasAuthorID">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Tweet"/>
         <rdfs:range rdf:resource="&xsd;long"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#DirectMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#Tweet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -84,6 +91,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#DirectMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#Tweet"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#YouTubeComment"/>
                 </owl:unionOf>
@@ -96,8 +104,15 @@
     <!-- http://vital.ai/ontology/vital-social#hasAuthorScreenName -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasAuthorScreenName">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Tweet"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#DirectMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-social#Tweet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -192,6 +207,15 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasDirectMessageID -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasDirectMessageID">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#DirectMessage"/>
+        <rdfs:range rdf:resource="&xsd;long"/>
     </owl:DatatypeProperty>
     
 
