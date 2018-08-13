@@ -20,6 +20,8 @@
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-nlp">
         <owl:versionInfo rdf:datatype="&xsd;string">0.2.304</owl:versionInfo>
         <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">com.vitalai.domain.nlp</vital-core:hasDefaultPackage>
+        <vital-core:hasDefaultArtifactId rdf:datatype="&xsd;string">vital-nlp</vital-core:hasDefaultArtifactId>
+        <vital-core:hasDefaultGroupId rdf:datatype="&xsd;string">vitalai-com</vital-core:hasDefaultGroupId>
         <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
     </owl:Ontology>
     
@@ -120,6 +122,16 @@ it should point to class URI, not a particular instance</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://vital.ai/ontology/vital-nlp#hasAnalyzedBody -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-nlp#hasAnalyzedBody">
+        <vital-core:isAnalyzedNoEquals rdf:datatype="&xsd;boolean">true</vital-core:isAnalyzedNoEquals>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-nlp#Document"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
     
 
 

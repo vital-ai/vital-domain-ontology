@@ -68,6 +68,19 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasActionStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasActionStatus">
+        <rdfs:comment xml:lang="en">in-preparation
+in-progress
+complete
+stopped</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#CampaignAction"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasAuthorID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasAuthorID">
@@ -394,6 +407,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasLocation">
+        <rdfs:range rdf:resource="&vital-core;geoLocation"/>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Location"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasLongitude -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasLongitude">
@@ -408,6 +430,16 @@
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasMediaCount">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#InstagramAccount"/>
         <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasMinutesBetweenTweets -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasMinutesBetweenTweets">
+        <rdfs:comment xml:lang="en">interval between sending subsequent tweets [minutes]</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#CampaignAction"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
     </owl:DatatypeProperty>
     
 
@@ -535,6 +567,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#hasRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasRadius">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Location"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#hasRecipientID -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasRecipientID">
@@ -574,6 +615,15 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasRetweetCount -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasRetweetCount">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Tweet"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
     </owl:DatatypeProperty>
     
 
@@ -619,6 +669,17 @@
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasTweetID">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Tweet"/>
         <rdfs:range rdf:resource="&xsd;long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#hasTweetStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#hasTweetStatus">
+        <rdfs:comment xml:lang="en">not-sent
+sent</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Tweet"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -726,6 +787,16 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#isStreamContextUser -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#isStreamContextUser">
+        <rdfs:comment xml:lang="en">should stream search use this user context instead of app one</rdfs:comment>
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-social#Edge_hasTwitterAccount"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#isTokenValid -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-social#isTokenValid">
@@ -746,10 +817,48 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#CampaignAction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#CampaignAction">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#DirectMessage -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-social#DirectMessage">
         <rdfs:subClassOf rdf:resource="&vital-nlp;Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasCampaignAction -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasCampaignAction">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#CampaignAction"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaCampaign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasCampaignActionDocument -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasCampaignActionDocument">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="&vital-nlp;Document"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#CampaignAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasCampaignActionFilterElement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasCampaignActionFilterElement">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#CampaignAction"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#FilterElement"/>
     </owl:Class>
     
 
@@ -774,12 +883,52 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasFilter -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasFilter">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#Filter"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaCampaign"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasFilterElement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasFilterElement">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#Filter"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#FilterElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasLocation -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasLocation">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#Location"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaCampaign"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#Edge_hasSocialMediaAccount -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasSocialMediaAccount">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
         <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
         <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#Edge_hasSocialMediaCampaign -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Edge_hasSocialMediaCampaign">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_TaxonomyEdge"/>
+        <vital-core:hasEdgeSrcDomain rdf:resource="http://vital.ai/ontology/vital#Account"/>
+        <vital-core:hasEdgeDestDomain rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaCampaign"/>
     </owl:Class>
     
 
@@ -821,10 +970,34 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#Filter -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Filter">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#FilterElement -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#FilterElement">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#InstagramAccount -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-social#InstagramAccount">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#Location -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#Location">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
     
 
@@ -845,10 +1018,42 @@
     
 
 
+    <!-- http://vital.ai/ontology/vital-social#SocialMediaCampaign -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#SocialMediaCampaign">
+        <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/vital-social#SoundCloudAccount -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/vital-social#SoundCloudAccount">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-social#SocialMediaAccount"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#TrackingHandle -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#TrackingHandle">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-social#FilterElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#TrackingHashTag -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#TrackingHashTag">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-social#FilterElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-social#TrackingPhrase -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/vital-social#TrackingPhrase">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-social#FilterElement"/>
     </owl:Class>
     
 
