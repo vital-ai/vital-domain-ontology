@@ -22,6 +22,8 @@
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-wordnet">
         <owl:versionInfo rdf:datatype="&xsd;string">0.2.304</owl:versionInfo>
         <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">com.vitalai.domain.wordnet</vital-core:hasDefaultPackage>
+        <vital-core:hasDefaultArtifactId rdf:datatype="&xsd;string">vital-wordnet</vital-core:hasDefaultArtifactId>
+        <vital-core:hasDefaultGroupId rdf:datatype="&xsd;string">vitalai-com</vital-core:hasDefaultGroupId>
         <owl:imports rdf:resource="http://vital.ai/ontology/vital"/>
     </owl:Ontology>
     

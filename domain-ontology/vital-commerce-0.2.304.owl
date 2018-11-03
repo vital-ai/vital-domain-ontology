@@ -24,6 +24,8 @@
     <owl:Ontology rdf:about="http://vital.ai/ontology/vital-commerce">
         <owl:versionInfo rdf:datatype="&xsd;string">0.2.304</owl:versionInfo>
         <vital-core:hasDefaultPackage rdf:datatype="&xsd;string">com.vitalai.domain.commerce</vital-core:hasDefaultPackage>
+        <vital-core:hasDefaultArtifactId rdf:datatype="&xsd;string">vital-commerce</vital-core:hasDefaultArtifactId>
+        <vital-core:hasDefaultGroupId rdf:datatype="&xsd;string">vitalai-com</vital-core:hasDefaultGroupId>
         <owl:imports rdf:resource="http://vital.ai/ontology/vital-generic-app"/>
     </owl:Ontology>
     
@@ -773,15 +775,6 @@ PENDING</rdfs:comment>
     
 
 
-    <!-- http://vital.ai/ontology/vital-commerce#isLocked -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isLocked">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
-        <rdfs:range rdf:resource="&xsd;boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://vital.ai/ontology/vital-commerce#isNeverExpires -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isNeverExpires">
@@ -795,15 +788,6 @@ PENDING</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isProductActive">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Product"/>
-        <rdfs:range rdf:resource="&xsd;boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://vital.ai/ontology/vital-commerce#isRetired -->
-
-    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/vital-commerce#isRetired">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/vital-commerce#Customer"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
     
@@ -1016,7 +1000,6 @@ PENDING</rdfs:comment>
     <owl:Class rdf:about="http://vital.ai/ontology/vital-commerce#ShippingInfo">
         <rdfs:subClassOf rdf:resource="&vital-core;VITAL_Node"/>
     </owl:Class>
-
 </rdf:RDF>
 
 

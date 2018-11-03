@@ -10,107 +10,21 @@ var vital_commerce_0_2_304_schema = {
   "schemas" : [ {
     "id" : "http://vital.ai/ontology/vital-commerce#CreditCard",
     "parent" : "http://vital.ai/ontology/vital-commerce#PaymentMethod",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#CreditCard",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#CreditCard",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#CreditCard" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasCardType" : {
         "type" : "string"
       },
       "http://vital.ai/ontology/vital-commerce#hasExpirationDate" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-commerce#hasImageURL" : {
-        "type" : "string"
-      },
       "http://vital.ai/ontology/vital-commerce#hasMaskedNumber" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-commerce#hasToken" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-commerce#isDefaultPaymentMethod" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Customer",
     "parent" : "http://vital.ai/ontology/vital#Account",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Customer",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Customer",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Customer" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasAccountPlanStatus" : {
         "type" : "string"
       },
@@ -141,640 +55,84 @@ var vital_commerce_0_2_304_schema = {
       "http://vital.ai/ontology/vital-commerce#hasTelephone" : {
         "type" : "string"
       },
-      "http://vital.ai/ontology/vital-commerce#isLocked" : {
-        "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-commerce#isRetired" : {
-        "type" : "boolean"
-      },
       "http://vital.ai/ontology/vital-commerce#isTestAccount" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasInvoice",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasInvoice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasInvoice",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#Invoice" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasInvoice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasItem",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasItem",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasItem",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-commerce#Invoice" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#InvoiceItem" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasItem" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasPaymentInfo",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasPaymentInfo",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasPaymentInfo",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-commerce#Invoice" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#PaymentInfo" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasPaymentInfo" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasPaymentMethod",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasPaymentMethod",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasPaymentMethod",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#PaymentMethod" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasPaymentMethod" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasPlan",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasPlan",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasPlan",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#Plan" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasPlan" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasProduct",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasProduct",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasProduct",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-commerce#InvoiceItem" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#Product" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasProduct" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasSelectedPaymentMethod",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasSelectedPaymentMethod",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasSelectedPaymentMethod",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-commerce#PaymentInfo", "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#PaymentMethod" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasSelectedPaymentMethod" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasServiceContract",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasServiceContract",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasServiceContract",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-commerce#InvoiceItem" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasServiceContract" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasShippingInfo",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasShippingInfo",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasShippingInfo",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital-commerce#Invoice" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#ShippingInfo" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasShippingInfo" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Edge_hasSubscription",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_TaxonomyEdge",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Edge_hasSubscription",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Edge_hasSubscription",
-    "type" : "object",
     "sourceDomains" : [ "http://vital.ai/ontology/vital#Account" ],
     "destinationDomains" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Edge_hasSubscription" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeDestination" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasEdgeSource" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasListIndex" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
-      }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Invoice",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Invoice",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Invoice",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Invoice" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasDiscount" : {
         "type" : "number"
       },
@@ -786,62 +144,12 @@ var vital_commerce_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-commerce#hasTax" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#InvoiceItem",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#InvoiceItem",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#InvoiceItem",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#InvoiceItem" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasBillingPeriodEndDate" : {
         "type" : "number"
       },
@@ -859,62 +167,12 @@ var vital_commerce_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-commerce#hasTotalPrice" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#PaymentInfo",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#PaymentInfo",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#PaymentInfo",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#PaymentInfo" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasAmount" : {
         "type" : "number"
       },
@@ -944,62 +202,12 @@ var vital_commerce_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-commerce#hasUpdatedAt" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#PaymentMethod",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#PaymentMethod",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#PaymentMethod",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#PaymentMethod" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasImageURL" : {
         "type" : "string"
       },
@@ -1008,62 +216,12 @@ var vital_commerce_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-commerce#isDefaultPaymentMethod" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Plan",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Plan",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Plan",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Plan" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasBillingDayOfMonth" : {
         "type" : "number"
       },
@@ -1102,62 +260,12 @@ var vital_commerce_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-commerce#hasUpdatedAt" : {
         "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#Product",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#Product",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#Product",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#Product" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasDescription" : {
         "type" : "string"
       },
@@ -1175,62 +283,12 @@ var vital_commerce_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-commerce#isProductActive" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#ResetPasswordRequest",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#ResetPasswordRequest",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#ResetPasswordRequest",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#ResetPasswordRequest" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasDate" : {
         "type" : "number"
       },
@@ -1242,62 +300,12 @@ var vital_commerce_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-commerce#hasUsername" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#ServiceContract",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#ServiceContract",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#ServiceContract",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasBalance" : {
         "type" : "number"
       },
@@ -1372,62 +380,12 @@ var vital_commerce_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-commerce#isNeverExpires" : {
         "type" : "boolean"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   }, {
     "id" : "http://vital.ai/ontology/vital-commerce#ShippingInfo",
     "parent" : "http://vital.ai/ontology/vital-core#VITAL_Node",
-    "$schema" : "http://json-schema.org/draft-04/schema#",
-    "title" : "http://vital.ai/ontology/vital-commerce#ShippingInfo",
-    "description" : "Auto-generated schema for owl class: http://vital.ai/ontology/vital-commerce#ShippingInfo",
-    "type" : "object",
     "properties" : {
-      "URI" : {
-        "type" : "string"
-      },
-      "type" : {
-        "enum" : [ "http://vital.ai/ontology/vital-commerce#ShippingInfo" ]
-      },
-      "types" : {
-        "type" : "array",
-        "minItems" : 1,
-        "items" : {
-          "type" : "string"
-        },
-        "uniqueItems" : true
-      },
-      "http://vital.ai/ontology/vital#hasCertainty" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasDegree" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital#hasPageRank" : {
-        "type" : "number"
-      },
       "http://vital.ai/ontology/vital-commerce#hasCity" : {
         "type" : "string"
       },
@@ -1445,31 +403,8 @@ var vital_commerce_0_2_304_schema = {
       },
       "http://vital.ai/ontology/vital-commerce#hasZipCode" : {
         "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasName" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasOntologyIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasProvenance" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#hasTimestamp" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasUpdateTime" : {
-        "type" : "number"
-      },
-      "http://vital.ai/ontology/vital-core#hasVersionIRI" : {
-        "type" : "string"
-      },
-      "http://vital.ai/ontology/vital-core#isActive" : {
-        "type" : "boolean"
       }
-    },
-    "required" : [ "URI", "type" ],
-    "additionalProperties" : false
+    }
   } ],
   "properties" : [ {
     "URI" : "http://vital.ai/ontology/vital-commerce#hasAccountPlanStatus",
@@ -1850,12 +785,6 @@ var vital_commerce_0_2_304_schema = {
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
-    "URI" : "http://vital.ai/ontology/vital-commerce#isLocked",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
-    "shortName" : "locked",
-    "multipleValues" : false,
-    "type" : "BooleanProperty"
-  }, {
     "URI" : "http://vital.ai/ontology/vital-commerce#isNeverExpires",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#ServiceContract" ],
     "shortName" : "neverExpires",
@@ -1865,12 +794,6 @@ var vital_commerce_0_2_304_schema = {
     "URI" : "http://vital.ai/ontology/vital-commerce#isProductActive",
     "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Product" ],
     "shortName" : "productActive",
-    "multipleValues" : false,
-    "type" : "BooleanProperty"
-  }, {
-    "URI" : "http://vital.ai/ontology/vital-commerce#isRetired",
-    "domainClassesURIs" : [ "http://vital.ai/ontology/vital-commerce#Customer" ],
-    "shortName" : "retired",
     "multipleValues" : false,
     "type" : "BooleanProperty"
   }, {
